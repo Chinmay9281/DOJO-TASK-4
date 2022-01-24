@@ -1,0 +1,831 @@
+*{
+    margin: 0px;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+/* Tags */
+
+/* header */
+#Note{
+    background-color: yellow;
+    color: red;
+    text-align: center;
+    padding: 5px;
+}
+
+/* Navbar */
+
+.nav-bar{
+    display: flex;
+    justify-content: space-evenly;
+    padding: 20px;
+    margin: 0px 15%;
+}
+
+.nav-links{
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    font-size: 20px;
+}
+
+.nav-links a{
+    color: grey;
+    text-decoration: none;
+    font-weight: 200;
+    font-family: 'Poppins', sans-serif;
+}
+
+.navlogo{
+    width: 15%;
+    height: 100%;
+}
+.menu-btn{
+    display: none;
+}
+.close-btn{
+    display: none;
+}
+
+@media (max-width:1100px){
+    .nav-links{
+        width: 100%;
+    }
+    .nav-bar a{
+        width: 80%;
+    }
+    .navlogo{
+        width: 40%;
+        height: 100%;
+    }
+    @media (max-width:600px){
+        .nav-bar{
+            width: 100%;
+            margin-left: 0px;
+        }
+        .navlogo{
+            width: 60%;
+            margin-left: -50px;
+            display: inline;
+        }
+        .nav-bar a{
+            display: inline;
+        }
+        .menu-btn{
+            font-size: 40px;
+            display: block;
+
+        }
+        .nav-links{
+            justify-content: right;
+        }
+        .nav-links {
+            flex-direction: column;
+            position: fixed;
+            left: 0;
+            right: 0;
+            top: 100%;
+            text-align: center;
+            width: 100%;
+            height: 300px;
+            background: #000;
+            box-shadow: 0 3px 4px rgb(0 0 0 / 0.1);
+            padding-top: 30px;
+            z-index: 999;
+        }
+        .nav-links a{
+            font-size: 40px;
+            margin: 10px;
+            margin-left: 60px;
+        }
+        .close-btn{
+            display: block;
+            text-align: right;
+            margin-right: 100px;
+            font-size: 40px;
+        }
+    }
+}
+
+/* Container Class */
+
+.content{
+    background-color: #000;
+    padding: 10px;
+    color: white;
+}
+
+#banner{
+    width: 100%;
+    position: relative;
+    z-index: 0;
+}
+
+.bannerMain{
+    display: flex;
+    justify-content: space-evenly;
+    padding: 5%;
+}
+.bannerContent{
+    width: 50%;
+    padding: 50px;
+    /* text-align: center; */
+}
+
+.bannerContent h2{
+    font-size: 30px;
+    margin-left: 100px;
+}
+.bannerContent h1{
+    font-size: 100px;
+    margin-left: 100px;
+}
+.bannerContent p{
+    font-size: 25px;
+    margin-top: 40px;
+    font-weight: 300;
+    margin-left: 100px;
+    text-align: left;
+}
+
+.bannerThumbnail::before{
+    position: absolute;
+    width: 50%;
+    height: 90%;
+    right: 30%;
+    content: '';
+    background-image: url('https://walrus.club/assets/images/banner-des.png');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    background-position-y: 0px;
+    z-index: -1;
+}
+.bannerThumbnail{
+    width: 60%;
+    position: relative;
+    z-index: 0;
+    text-align: right;
+}
+.banner-img{
+    margin-right: 225px;
+    margin-top: 150px;
+    transform: rotate(-4deg);
+}
+
+#three{
+    padding: 0 13%;
+}
+
+.tab{
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+}
+.tabContent{
+    width: 70%;
+}
+.tabContent h5{
+    font-size: 40px;
+    margin-bottom: 50px;
+}
+.tabImg img{
+    width: 50%;
+}
+
+/* Sponsers section */
+#sponsers{
+    /* margin: 0px; */
+    width: 100%;
+    height: 100%;
+    position: relative;
+    background-color: #fff;
+    color: black;
+    text-align: center;
+    padding: 20px;
+    padding-top: 80px;
+}
+.trustThumbnail{
+    display: flex;
+    justify-content: space-evenly;
+    padding-bottom: 80px;
+}
+#sponsers h1{
+    margin-bottom: 50px;
+    font-weight: bold;
+    font-size: 70px;
+}
+.trustThumbnail div{
+    width: 20%;
+}
+.trustThumbnail1 img{
+    width: 60%;
+    height: 100%;
+}
+.trustThumbnail2 img{
+    width: 60%;
+    height: 100%;
+}
+.trustThumbnail3 img{
+    width: 60%;
+    height: 100%;
+}
+.trustThumbnail4 img{
+    width: 60%;
+    height: 100%;
+}
+
+/* Rewards Section */
+
+
+
+#rewards {
+    margin: 0px;
+    width: 100%;
+    background: #000;
+    padding: 12% 0px 0px 0px;
+    overflow: hidden;
+}
+
+
+.rewardsMain{
+    display: flex;
+    justify-content: space-evenly;
+    padding: 10%;
+}
+.rewardsContent h2{
+    margin-top: 40px;
+}
+.rewardsContent h3{
+    margin-top: 40px;
+    color: grey;
+}
+
+
+/* Brands section */
+.brandsMain{
+    display: flex;
+    justify-content: space-evenly;
+    padding: 10%;
+}
+.brandsThumbnail img{
+    width: 100%;
+    height: 100%;
+}
+.brandsContent h1{
+    font-weight: bolder;
+    font-family: 'Poppins', sans-serif;
+    margin-bottom: 50px;
+}
+.brandsContent h2{
+    color: grey;
+}
+
+/* downloads section */
+
+#downloads{
+    padding: 10%;
+    text-align: center  ;
+}
+.downloadsMain h1{
+    font-size: 50px;
+}
+.downloadsMain h2{
+    font-size: 25px;
+}
+.downloadsThumbnail{
+    margin-top: 50px;
+}
+.downloadsThumbnailLinks img{
+    width: 40%;
+    height: 40%;
+}
+
+
+/* Testimonials section */
+#testimonials{
+   background-color: #000;
+   color: white;
+   padding: 20px;
+   text-align: center;
+}
+#testimonials h2{
+    font-size: 40px;
+    margin-bottom: 50px;
+}
+.testimonial-text{
+    width: 60%;
+    text-align: center;
+    font-size: 3 rem;
+    line-height: 1.5;
+    margin-left: 300px;
+}
+.testimonial-image{
+    width: 5%;
+    border-radius: 50%;
+}
+
+
+/* Warlus section */
+#walrusClub{
+    padding: 10%;
+}
+.walrusClubMain{
+    display: flex;
+    justify-content: space-evenly;
+}
+.walrusClubContent h2{
+    margin-top: 50px;
+    color: grey;
+}
+
+.walrusClubThumbnailLinks img{
+    width: 80%;
+    height: 80%;
+}
+
+/* businessClients section */
+#businessClients{
+    background: #fff;
+    color: black;
+    text-align: center;
+    padding: 50px 0px;
+}
+#businessClients h1{
+    margin-bottom: 80px;
+}
+
+/* Security section */
+
+#security{
+    background: url('https://walrus.club/assets/images/Security.png');
+    background-repeat: no-repeat;
+    background-position: right;
+    background-size: contain;
+    padding: 10%;
+}
+.securityContent h2{
+    margin-top: 50px;
+    color: grey;
+    width: 80%;
+}
+.securityIconBox img{
+    width: 40%;
+    height: 90%;
+    margin: 0px;
+}
+.securityIconBox{
+    padding: 0px;
+    margin: 0px;
+}
+.securityIcon{
+    display: flex;
+    /* justify-content: space-around; */
+    width: 50%;
+}
+.securityMain{
+    width: 80%;
+}
+
+/* parallax section */
+
+
+#parallax{
+    width: 100%;
+    background: url('https://walrus.club/assets/images/parallax.png');
+    background-repeat: no-repeat;
+    background-position: right;
+    background-size: cover;
+    padding: 10%;
+    text-align: center;
+}
+.parallaxMain{
+    margin-top: 100px;
+}
+.parallaxMain h1{
+    font-size: 50px;
+    font-weight: bolder;
+}
+.parallaxMain p{
+    font-size: 25px;
+    font-weight: lighter;
+    color: grey;
+}
+
+/* footer section */
+
+footer{
+    padding: 10%;
+}
+
+.footerMain{
+    display: flex;
+    justify-content: space-between;
+    height: 300px;
+    width: 100%;
+}
+.footerColumn1{
+    width: 80%;
+    color: grey;
+}
+.footerColumn1 a{
+    color: grey;
+    text-decoration: none;
+}
+.footerColumn2{
+    text-align: center;
+    width: 50%;
+}
+.footerSocialLinks{
+    margin-bottom: 50px;
+}
+.footerSocialLinks a{
+    margin-right: 15px;
+}
+.footerColumn2 a{
+    display: block;
+}
+
+
+
+
+/* Responsive */
+
+@media (max-width:1270px){
+    .content{
+        margin-right: -150px;
+    }
+    #Note{
+        margin-right: -150px;
+    }
+    @media (max-width:1100px){
+        .content{
+            margin-right: -250px;
+        }
+        #Note{
+            margin-right: -250px;
+        }
+        @media (max-width:1000px){
+            .content{
+                margin-right: -400px;
+            }
+            #Note{
+                margin-right: -400px;
+            }
+            @media (max-width:800px){
+                .content{
+                    margin-right: -250px;
+                }
+                #Note{
+                    margin-right: -250px;
+                }
+                /* Banner section */
+                .bannerMain{
+                    flex-direction: column;
+                }
+                .bannerContent{
+                    width: 100%;
+                }
+                .bannerThumbnail{
+                    width: 100%;
+                }
+                .banner-img{
+                    margin-right: 320px;
+                    margin-top: 200px;
+                }
+                /* Rewards section */
+                .rewardsMain{
+                    flex-direction: column;
+                }
+                /* brands section */
+                .brandsMain{
+                    flex-direction: column;
+                }
+                /* walrusclub section */
+                .walrusClubMain{
+                    flex-direction: column;
+                }
+                .walrusClubThumbnailLinks img{
+                    width: 50%;
+                    height: 50%;
+                    margin-bottom: 50px;
+                }
+                /* testimonal section */
+                .testimonial-text{
+                    margin-left: 200px;
+                    font-size: 20px;
+                }
+                .carousel-item em{
+                    font-size: 20px;
+                }
+                .testimonial-image{
+                    width: 10%;
+                }
+                @media (max-width:620px){
+                    .content{
+                        margin-right: -600px;
+                    }
+                    #Note{
+                        margin-right: -600px;
+                        font-size: 30px;
+                    }
+                    /* three section */
+                    .tabContent p{
+                        font-size: 20px;
+                    }
+                    .tabImg img{
+                        width: 60%;
+                    }
+                    @media (max-width:480px){
+                        .content{
+                            margin-right: -600px;
+                        }
+                        #Note{
+                            margin-right: -600px;
+                        }
+                        /* banner section */
+                        .bannerContent h2{
+                            font-size: 50px;
+                        }
+                        .bannerContent p{
+                            font-size: 30px;
+                        }
+                        /* three section */
+                        .tabContent h5{
+                            font-size: 50px;
+                        }
+                        .tabContent p{
+                            font-size: 30px;
+                        }
+                        .tabImg img{
+                            width: 100%;
+                        }
+                        /* rewards section */
+                        .rewardsContent h2{
+                            font-size: 40px;
+                        }
+                        .rewardsContent h1{
+                            font-size: 40px;
+                        }
+                        .rewardsContent h3{
+                            font-size: 30px;
+                        }
+                        /* brands section */
+                        .brandsContent h1{
+                            font-size: 40px;
+                        }
+                        .brandsContent h2{
+                            font-size: 30px;
+                        }
+                        /* downloads section */
+                        .downloadsMain h2{
+                            font-size: 30px;
+                        }
+                        .downloadsThumbnailLinks img{
+                            width: 70%;
+                            height: 70%;
+                        }
+                        /* testimonial section */
+                        #testimonials h2{
+                            font-size: 60px;
+                            margin-bottom: 50px;
+                        }
+                        .testimonial-text{
+                            font-size: 30px;
+                        }
+                        .testimonial-image{
+                            width: 15%;
+                        }
+                        .carousel-item em{
+                            font-size: 25px;
+                        }
+                        /* walrus club */
+                        .walrusClubContent h1{
+                            font-size: 40px;
+                        }
+                        .walrusClubContent h2{
+                            font-size: 30px;
+                        }
+                        .walrusClubThumbnailLinks img{
+                            width: 70%;
+                            height: 70%;
+                        }
+                        /* Business section */
+                        #businessClients h1{
+                            font-size: 50px;
+                        }
+                        .trustThumbnail1 img{
+                            width: 100%;
+                            height: 100%;
+                        }
+                        .trustThumbnail2 img{
+                            width: 100%;
+                            height: 100%;
+                        }
+                        .trustThumbnail3 img{
+                            width: 100%;
+                            height: 100%;
+                        }
+                        .trustThumbnail4 img{
+                            width: 100%;
+                            height: 100%;
+                        }
+                        /* Security Section */
+                        .securityIconBox img{
+                            width: 100%;
+                            height: 100%;
+                        }
+                        .securityContent h1{
+                            font-size: 40px;
+                        }
+                        .securityContent h2{
+                            font-size: 25px;
+                        }
+                        /* parallax section */
+                        .parallaxMain{
+                            background-position: center;
+                        }
+                        .parallaxMain h1{
+                            font-size: 70px;
+                        }
+                        .parallaxMain p{
+                            font-size: 40px;
+                        }
+                        /* footer section */
+                        footer{
+                            height: 1000px;
+                        }
+                        .footerMain{
+                            flex-direction: column;
+                        }
+                        .footerColumn1{
+                            width: 100%;
+                            font-size: 50px;
+                        }
+                        .footerColumn2{
+                            width: 100%;
+                            font-size: 50px;
+                            text-align: left;
+                        }
+                        .footerLogo img{
+                            width: 100%;
+                            height: 100%;
+                        }
+                        .fab{
+                            font-size: 80px;
+                        }
+                        @media (max-width:330px) {
+                            .content{
+                                margin-right: -600px;
+                            }
+                            #Note{
+                                margin-right: -600px;
+                                font-size: 50px;
+                            }
+                            /* banner section */
+                            .bannerContent h2{
+                                font-size: 60px;
+                            }
+
+                            .bannerContent p{
+                                font-size: 45px;
+                            }
+                            /* three section */
+                            .tab{
+                                flex-direction: column;
+                            }
+                            .tabContent h5{
+                                font-size: 70px;
+                            }
+                            .tabContent p{
+                                font-size: 40px;
+                            }
+                            .tabImg img{
+                                width: 60%;
+                            }
+                            /* sponsers section */
+                            .trustThumbnail{
+                                flex-direction: column;
+                                padding-left: 200px;
+                            }
+                            .trustThumbnail1 img{
+                                width: 400px;
+                                /* height: 100%; */
+                                margin: 30px 0px;
+                            }
+                            .trustThumbnail2 img{
+                                width: 400px;
+                                height: 100%;
+                                margin: 30px 0px;
+                            }
+                            .trustThumbnail3 img{
+                                width: 400px;
+                                height: 100%;
+                                margin: 30px 0px;
+                            }
+                            .trustThumbnail4 img{
+                                width: 400px;
+                                height: 100%;
+                                margin: 30px 0px;
+                            }
+                            /* rewards section */
+                            .rewardsContent h2{
+                                font-size: 65px;
+                            }
+                            .rewardsContent h1{
+                                font-size: 65px;
+                            }
+                            .rewardsContent h3{
+                                font-size: 50px;
+                            }
+                            .rewardsThumbnail img{
+                                width: 800px;
+                                margin-left: -120px;
+                            }
+                            /* brands section */
+                            .brandsContent h1{
+                                font-size: 65px;
+                            }
+                            .brandsContent h2{
+                                font-size: 50px;
+                            }
+                            .brandsThumbnail img{
+                                width: 800px;
+                                margin-left: -80px;
+                            }
+                            /* downloads section */
+                            .downloadsMain h1{
+                                font-size: 65px;
+                            }
+                            .downloadsMain h2{
+                                font-size: 45px;
+                            }
+                            .downloadsThumbnailLinks img{
+                                width: 100%;
+                            }
+                            /* testimonial section */
+                            .testimonial-text{
+                                font-size: 40px;
+                                margin-left: 150px;
+                            }  
+                            .testimonial-image{
+                                width: 15%;
+                            }
+                            .carousel-item em{
+                                font-size: 30px;
+                            }
+                            /* walrusclub section */
+                            .walrusClubContent h1{
+                                font-size: 65px;
+                            }
+                            .walrusClubContent h2{
+                                font-size: 50px;
+                            }
+                            .walrusClubThumbnailLinks img{
+                                width: 100%;
+                            }
+                            .walrusClubThumbnail img{
+                                width: 800px;
+                                margin-left: -100px;
+                            }
+                            /* businessClients section */
+                            #businessClients h1{
+                                font-size: 70px;
+                            }
+                            /* security section */
+                            #security{
+                                background-position: -200px 2000px;
+                                height: auto;
+                                padding-bottom: 800px;
+                            }
+                            .securityMain{
+                                width: 100%;
+                            }
+                            .securityContent h1{
+                                font-size: 65px;
+                            }
+                            .securityContent h2{
+                                font-size: 45px;
+                            }
+                            .securityIcon{
+                                flex-direction: column;
+                                /* padding-left: 80px; */
+                            }
+                            .securityIconBox img{
+                                width: 500px;
+                            }
+                            /* parallax section */
+                            .parallaxMain h1{
+                                font-size: 70px;
+                            }
+                            .parallaxMain p{
+                                font-size: 60px;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
